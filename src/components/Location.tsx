@@ -1,67 +1,90 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const nearbyPlaces = [
-  { name: 'City Center', distance: '5 min', icon: '🏙️' },
-  { name: 'International School', distance: '10 min', icon: '🏫' },
-  { name: 'Shopping Mall', distance: '8 min', icon: '🛍️' },
-  { name: 'Hospital', distance: '7 min', icon: '🏥' },
-  { name: 'Restaurant', distance: '3 min', icon: '🍽️' },
-  { name: 'Public Transport', distance: '2 min', icon: '🚌' },
+const strategicLocations = [
+  { name: "Puri Indah & Lippo Mall", image: "/images/lippo.png" },
+  { name: "IPEKA & Springfield International School", image: "/images/ipeka.png" },
+  { name: "West Jakarta CBD", image: "/images/cbd.png" },
+  { name: "RSPI", image: "/images/rspi.png" },
+  { name: "Modern Market (Puri Indah)", image: "/images/puriindah.png" },
+  { name: "Coffeeshop & Cafes (Starbucks & Naked Papa)", image: "/images/starbucks.png" },
+];
+
+const directAccess = [
+  { name: "Airport", image: "/images/airport.png" },
+  { name: "Inner City", image: "/images/innercity.png" },
+  { name: "JORR Highway", image: "/images/highway.png" },
 ];
 
 const Location = () => {
   return (
-    <section id="location" className="py-20 bg-white">
+    <section id="location" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div 
-          className="text-center mb-16"
+        <motion.div
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold mb-4">Prime Location</h2>
+          <h2 className="text-4xl font-bold mb-4">Strategic Location</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Experience the perfect balance of tranquility and urban convenience in one of the most sought-after neighborhoods.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-16">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-gray-50 p-6 rounded-xl shadow-lg"
+            className="space-y-6"
           >
-            <h3 className="text-2xl font-semibold mb-6">Nearby Places</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {nearbyPlaces.map((place, index) => (
-                <div key={index} className="flex items-center space-x-3 p-3 hover:bg-white rounded-lg transition-colors">
-                  <span className="text-2xl">{place.icon}</span>
-                  <div>
-                    <p className="font-medium">{place.name}</p>
-                    <p className="text-sm text-gray-500">{place.distance} away</p>
+            <h3 className="text-2xl font-semibold text-center md:text-left">
+              Strategic Location, surroundings :
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {strategicLocations.map((location, index) => (
+                <div 
+                  key={index}
+                  className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition-shadow"
+                >
+                  <div className="aspect-w-16 aspect-h-9 mb-3 overflow-hidden rounded-md">
+                    <img 
+                      src={location.image} 
+                      alt={location.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
+                  <p className="text-center font-medium">{location.name}</p>
                 </div>
               ))}
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="h-96 bg-gray-200 rounded-xl overflow-hidden"
+            className="space-y-6"
           >
-            {/* Replace with your actual map embed */}
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-r from-blue-100 to-indigo-100">
-              <div className="text-center p-6">
-                <div className="text-5xl mb-4">📍</div>
-                <h3 className="text-xl font-semibold mb-2">Location Map</h3>
-                <p className="text-gray-600">Interactive map will be embedded here</p>
-              </div>
+            <h3 className="text-2xl font-semibold text-center md:text-left">
+              Direct Access to :
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {directAccess.map((access, index) => (
+                <div 
+                  key={index}
+                  className="bg-gray-50 p-4 rounded-lg hover:shadow-md transition-shadow flex items-center space-x-4"
+                >
+                  <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-md">
+                    <img 
+                      src={access.image} 
+                      alt={access.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="font-medium">{access.name}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

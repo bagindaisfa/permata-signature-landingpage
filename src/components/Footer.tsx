@@ -24,19 +24,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-medium mb-4">Contact</h4>
             <address className="not-italic text-gray-400 space-y-2">
-              <p>123 Signature St, Jakarta</p>
+              <p>Jl Puri Kembangan Raya A/3 Puri Indah, Jakarta</p>
               <p>Email: info@permatasignature.com</p>
-              <p>Phone: +62 123 4567 890</p>
+              <p>Phone: 021-5825757</p>
             </address>
           </div>
           
-          <div>
-            <h4 className="text-lg font-medium mb-4">Newsletter</h4>
-            <form className="flex">
-              <input type="email" placeholder="Your email" className="px-4 py-2 w-full rounded-l-lg text-gray-900" required />
-              <button type="submit" className="bg-primary px-4 rounded-r-lg">Subscribe</button>
-            </form>
-          </div>
+          
         </div>
         
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">

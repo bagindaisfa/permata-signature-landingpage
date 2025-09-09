@@ -1,14 +1,10 @@
 import { motion } from 'framer-motion';
 
 const amenities = [
-  { name: 'Swimming Pool', icon: '🏊' },
-  { name: 'Fitness Center', icon: '💪' },
-  { name: 'Landscaped Gardens', icon: '🌿' },
+  { name: 'Premium-Smart Cluster', icon: '🏙️' },
   { name: 'Children\'s Play Area', icon: '🧒' },
   { name: '24/7 Security', icon: '👮' },
-  { name: 'Underground Parking', icon: '🚗' },
-  { name: 'Elevators', icon: '🛗' },
-  { name: 'CCTV Surveillance', icon: '📹' },
+  { name: 'Parking and Buggy Car for Visitor', icon: '🚗' },
 ];
 
 const Amenities = () => {
