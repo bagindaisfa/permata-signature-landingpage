@@ -10,7 +10,7 @@ const Hero = () => {
           alt="Permata Signature Residence" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-ps-dark-900 bg-opacity-80"></div>
       </div>
 
       {/* Hero Content */}
@@ -22,7 +22,7 @@ const Hero = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Experience Luxury Living at <span className="text-yellow-400">Permata Signature</span>
+            Experience Luxury Living at <span className="text-ps-primary-pale">Permata Signature</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8">
             Discover your dream home in the heart of the city, where modern design meets unparalleled comfort.
@@ -32,7 +32,7 @@ const Hero = () => {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 px-8 rounded-lg transition-colors"
+              className="bg-ps-primary-pale hover:bg-ps-primary-light text-ps-dark-900 font-semibold py-3 px-8 rounded-lg transition-colors"
             >
               Schedule a Visit
             </motion.a>
@@ -40,7 +40,7 @@ const Hero = () => {
               href="#gallery"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white hover:bg-white hover:bg-opacity-10 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+              className="border-2 border-ps-primary-pale hover:bg-ps-primary-700 hover:bg-opacity-20 text-ps-primary-pale font-semibold py-3 px-8 rounded-lg transition-colors"
             >
               View Gallery
             </motion.a>
@@ -50,14 +50,14 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-ps-primary-pale"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
       >
-        <div className="w-8 h-12 border-2 border-white rounded-full flex justify-center p-1">
-          <div className="w-1 h-3 bg-white rounded-full"></div>
+        <div className="w-8 h-12 border-2 border-ps-primary-pale rounded-full flex justify-center p-1">
+          <div className="w-1 h-3 bg-ps-primary-pale rounded-full"></div>
         </div>
-        <p className="text-white text-sm mt-2">Scroll Down</p>
+        <p className="text-ps-primary-pale text-sm mt-2">Scroll Down</p>
       </motion.div>
     </section>
   );

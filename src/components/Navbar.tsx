@@ -23,28 +23,65 @@ const Navbar = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled || !isHomePage ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+      className={`fixed w-full z-50 transition-all duration-500 ${
+        scrolled || !isHomePage 
+          ? 'bg-ps-primary-100/95 backdrop-blur-sm shadow-lg py-3' 
+          : 'bg-ps-dark-900/80 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">Permata</span>
-            <span className="text-2xl font-light text-secondary">Signature</span>
+            <img 
+              src={scrolled || !isHomePage ? '/logo-blue.png' : '/logo.png'} 
+              alt="Permata Signature" 
+              className={`h-10 md:h-12 transition-all duration-300 ${
+                scrolled || !isHomePage ? 'opacity-100' : 'opacity-90 hover:opacity-100'
+              }`} 
+              style={{minWidth: '230px',minHeight: '57px'}}
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="#home" className="text-gray-700 hover:text-primary transition-colors">Home</Link>
-            <Link to="#about" className="text-gray-700 hover:text-primary transition-colors">About</Link>
-            <Link to="#gallery" className="text-gray-700 hover:text-primary transition-colors">Gallery</Link>
-            <Link to="#amenities" className="text-gray-700 hover:text-primary transition-colors">Amenities</Link>
-            <Link to="#location" className="text-gray-700 hover:text-primary transition-colors">Location</Link>
+            <Link 
+              to="#home" 
+              className={`${scrolled || !isHomePage ? 'text-ps-dark-900' : 'text-ps-primary-pale'} hover:text-ps-primary-700 transition-colors font-medium`}
+            >
+              Home
+            </Link>
+            <Link 
+              to="#about" 
+              className={`${scrolled || !isHomePage ? 'text-ps-dark-900' : 'text-ps-primary-pale'} hover:text-ps-primary-700 transition-colors font-medium`}
+            >
+              About
+            </Link>
+            <Link 
+              to="#gallery" 
+              className={`${scrolled || !isHomePage ? 'text-ps-dark-900' : 'text-ps-primary-pale'} hover:text-ps-primary-700 transition-colors font-medium`}
+            >
+              Gallery
+            </Link>
+            <Link 
+              to="#amenities" 
+              className={`${scrolled || !isHomePage ? 'text-ps-dark-900' : 'text-ps-primary-pale'} hover:text-ps-primary-700 transition-colors font-medium`}
+            >
+              Amenities
+            </Link>
+            <Link 
+              to="#location" 
+              className={`${scrolled || !isHomePage ? 'text-ps-dark-900' : 'text-ps-primary-pale'} hover:text-ps-primary-700 transition-colors font-medium`}
+            >
+              Location
+            </Link>
             <Link 
               to="#contact" 
-              className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors"
+              className={`${
+                scrolled || !isHomePage 
+                  ? 'bg-ps-primary-700 text-ps-primary-pale hover:bg-ps-primary-800' 
+                  : 'bg-ps-primary-pale text-ps-dark-900 hover:bg-white'
+              } px-6 py-2 rounded-lg transition-all duration-300 font-medium`}
             >
               Contact Us
             </Link>
@@ -54,7 +91,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary focus:outline-none"
+              className={`${scrolled || !isHomePage ? 'text-ps-dark-900' : 'text-ps-primary-pale'} hover:text-ps-primary-700 focus:outline-none transition-colors`}
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -72,42 +109,42 @@ const Navbar = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 to="#home" 
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-ps-dark-900 hover:text-ps-primary-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 to="#about" 
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-ps-dark-900 hover:text-ps-primary-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link 
                 to="#gallery" 
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-ps-dark-900 hover:text-ps-primary-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Gallery
               </Link>
               <Link 
                 to="#amenities" 
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-ps-dark-900 hover:text-ps-primary-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Amenities
               </Link>
               <Link 
                 to="#location" 
-                className="text-gray-700 hover:text-primary transition-colors"
+                className="text-ps-dark-900 hover:text-ps-primary-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Location
               </Link>
               <Link 
                 to="#contact" 
-                className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors text-center"
+                className="bg-ps-primary-700 text-ps-primary-pale px-6 py-2 rounded-lg hover:bg-ps-primary-800 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
