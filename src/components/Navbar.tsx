@@ -34,7 +34,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src={scrolled || !isHomePage ? '/logo-blue.png' : '/logo.png'} 
+              src={scrolled || !isHomePage ? '/logo-colored.png' : '/logo-white.png'} 
               alt="Permata Signature" 
               className={`h-10 md:h-12 transition-all duration-300 ${
                 scrolled || !isHomePage ? 'opacity-100' : 'opacity-90 hover:opacity-100'
