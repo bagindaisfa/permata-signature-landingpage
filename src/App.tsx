@@ -4,11 +4,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Gallery from './components/Gallery';
-import Amenities from './components/Amenities';
 import Location from './components/Location';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 function AppContent() {
   const location = useLocation();
@@ -23,7 +23,6 @@ function AppContent() {
               <Hero />
               <About />
               <Gallery />
-              <Amenities />
               <Location />
               <Contact />
             </>
@@ -32,6 +31,8 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      {/* Floating WhatsApp chat widget */}
+      <WhatsAppWidget />
     </div>
   );
 }

@@ -5,11 +5,17 @@ const Hero = () => {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0002.jpg" 
-          alt="Permata Signature Residence" 
-          className="w-full h-full object-cover"
-        />
+        <picture>
+          <source
+            srcSet="/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0002.webp"
+            type="image/webp"
+          />
+          <img 
+            src="/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0002.jpg" 
+            alt="Permata Signature Residence" 
+            className="w-full h-full object-cover"
+          />
+        </picture>
         <div className="absolute inset-0 bg-ps-dark-900 bg-opacity-80"></div>
       </div>
 
@@ -22,10 +28,10 @@ const Hero = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Experience Luxury Living at <span className="text-ps-primary-pale">Permata Signature</span>
+            <span className="text-ps-primary-pale">Permata Signature</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8">
-            Discover your dream home in the heart of the city, where modern design meets unparalleled comfort.
+          “ We build residences that blend modern timelessness with natural harmony — delivering healthy, green, and future-ready living. ”
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
@@ -36,21 +42,14 @@ const Hero = () => {
             >
               Schedule a Visit
             </motion.a>
-            <motion.a
-              href="#gallery"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-ps-primary-pale hover:bg-ps-primary-700 hover:bg-opacity-20 text-ps-primary-pale font-semibold py-3 px-8 rounded-lg transition-colors"
-            >
-              View Gallery
-            </motion.a>
+            
           </div>
         </motion.div>
       </div>
 
       {/* Scroll Indicator */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-ps-primary-pale"
+        className="absolute bottom-10 transform -translate-x-1/2 flex flex-col items-center text-ps-primary-pale"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
       >

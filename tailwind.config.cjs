@@ -12,7 +12,8 @@ module.exports = {
         accent: '#f6ad55',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        heading: ['"Cinzel Decorative"', 'serif'],
       },
     },
   },
