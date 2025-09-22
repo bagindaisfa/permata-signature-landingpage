@@ -2,12 +2,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,9 +21,35 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your inquiry! We will get back to you soon.");
+    setIsSubmitting(true);
+
+    // WhatsApp number (replace with actual business number)
+    const phoneNumber = "6281292172776"; // Replace with actual WhatsApp number
+
+    // Format and encode the message
+    const encodedMessage =
+      `*Hello! I'm interested in Permata Signature Residence.*%0A%0A` +
+      `*Name:* ${encodeURIComponent(formData.name)}%0A` +
+      `*Email:* ${encodeURIComponent(formData.email)}%0A` +
+      `*Phone:* ${encodeURIComponent(formData.phone)}%0A` +
+      `*Message:* ${encodeURIComponent(formData.message)}`;
+
+    const url = isMobile
+      ? `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+    // Open WhatsApp with the message
+    window.open(url, "_blank");
+
+    // Reset form and show success message
     setFormData({ name: "", email: "", phone: "", message: "" });
+    setSubmitStatus("success");
+    setIsSubmitting(false);
+
+    // Clear success message after 5 seconds
+    setTimeout(() => {
+      setSubmitStatus("");
+    }, 5000);
   };
 
   return (
@@ -71,7 +100,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ps-primary focus:border-transparent"
                   required
                 />
               </div>
@@ -90,7 +119,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ps-primary focus:border-transparent"
                     required
                   />
                 </div>
@@ -108,7 +137,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ps-primary focus:border-transparent"
                     required
                   />
                 </div>
@@ -127,17 +156,23 @@ const Contact = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ps-primary focus:border-transparent"
                   required
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-opacity-90 transition-colors"
+                className="w-full bg-ps-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-ps-primary-dark transition-colors"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
+              {submitStatus === "success" && (
+                <div className="text-green-300 text-sm">
+                  Thank you! You'll be redirected to WhatsApp shortly.
+                </div>
+              )}
             </form>
           </motion.div>
         </div>
