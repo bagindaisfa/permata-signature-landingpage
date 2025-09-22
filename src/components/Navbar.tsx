@@ -23,6 +23,7 @@ const Navbar = () => {
 
   return (
     <header
+      onMouseLeave={() => setIsOpen(false)}
       className={`fixed w-full z-50 transition-all duration-500 ${
         scrolled || !isHomePage
           ? "bg-ps-primary-100/95 backdrop-blur-sm shadow-lg py-3"
@@ -36,7 +37,7 @@ const Navbar = () => {
             <img
               src={
                 scrolled || !isHomePage
-                  ? "/logo-colored.png"
+                  ? "/logo.png"
                   : "/logo-white.png"
               }
               alt="Permata Signature"
@@ -100,7 +101,7 @@ const Navbar = () => {
                   : "bg-ps-primary-pale text-ps-dark-900 hover:bg-white"
               } px-6 py-2 rounded-lg transition-all duration-300 font-medium`}
             >
-              Contact Us
+              Contact Our Sales
             </a>
           </nav>
 
@@ -108,6 +109,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => setIsOpen(!isOpen)}
+              onMouseEnter={() => setIsOpen(true)}
               className={`${
                 scrolled || !isHomePage
                   ? "text-ps-dark-900"
@@ -162,7 +164,7 @@ const Navbar = () => {
                 className="m-3 text-white border border-white px-6 py-2 rounded-lg hover:bg-white hover:text-ps-dark-900 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
-                Contact Us
+                Contact Our Sales
               </a>
             </nav>
           </div>

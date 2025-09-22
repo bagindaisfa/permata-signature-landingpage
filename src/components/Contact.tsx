@@ -60,7 +60,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
+          <h2 className="text-4xl font-bold mb-4">Contact Our Sales</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
         </motion.div>
 
