@@ -5,7 +5,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 const Gallery = () => {
   const products = [
     {
-      title: 'THE HAVEN',
+      title: 'THE SIGNATURE',
       size: 'TYPE 9×10',
       image: '/images/type-9.png',
       plan: '/images/denah-type-9.png',
