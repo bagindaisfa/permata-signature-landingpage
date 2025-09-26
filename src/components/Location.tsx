@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
 const strategicLocations = [
-  { name: "Puri Indah & Lippo Mall", image: "/images/lippo.png" },
-  { name: "IPEKA & Springfield International School", image: "/images/ipeka.png" },
-  { name: "West Jakarta CBD", image: "/images/cbd.png" },
-  { name: "RSPI", image: "/images/rspi.png" },
-  { name: "Modern Market (Puri Indah)", image: "/images/puriindah.png" },
-  { name: "Coffeeshop & Cafes (Starbucks & Naked Papa)", image: "/images/starbucks.png" },
+  { name: "Puri Indah & Lippo Mall", image: "/images/lippo.webp" },
+  { name: "IPEKA & Springfield International School", image: "/images/ipeka.webp" },
+  { name: "West Jakarta CBD", image: "/images/cbd.webp" },
+  { name: "RSPI", image: "/images/rspi.webp" },
+  { name: "Modern Market (Puri Indah)", image: "/images/puriindah.webp" },
+  { name: "Coffeeshop & Cafes (Starbucks & Naked Papa)", image: "/images/starbucks.webp" },
 ];
 
 const directAccess = [
-  { name: "Airport", image: "/images/airport.png" },
-  { name: "Inner City", image: "/images/innercity.png" },
-  { name: "JORR Highway", image: "/images/highway.png" },
+  { name: "Airport", image: "/images/airport.webp" },
+  { name: "Inner City", image: "/images/innercity.webp" },
+  { name: "JORR Highway", image: "/images/highway.webp" },
 ];
 
 const Location = () => {

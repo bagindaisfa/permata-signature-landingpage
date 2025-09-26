@@ -11,7 +11,7 @@ const Hero = () => {
             type="image/webp"
           />
           <img 
-            src="/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0002.jpg" 
+            src="/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0002.webp" 
             alt="Permata Signature Residence" 
             className="w-full h-full object-cover"
           />

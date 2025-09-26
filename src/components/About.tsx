@@ -3,29 +3,29 @@ import { motion } from "framer-motion";
 const About = () => {
   const features = [
     {
-      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0004.jpg",
+      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0004.webp",
       title: "24/7 Security",
       description:
         "Gated community with CCTV and professional security personnel.",
     },
     {
-      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0009.jpg",
+      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0009.webp",
       title: "Playground",
       description: "Safe and engaging outdoor play area for children.",
     },
     {
-      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0008.jpg",
+      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0008.webp",
       title: "Boulevard",
       description:
         "Elegant boulevard with lush greenery and wide pedestrian paths.",
     },
     {
-      img: "/images/ev-charging-station.png",
+      img: "/images/ev-charging-station.webp",
       title: "EV Charging Station",
       description: "Convenient on-site charging points for electric vehicles.",
     },
     {
-      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0005.jpg",
+      img: "/images/250825 PERMATA SIGNATURE RESIDENCE - TOUCHUP VISUALIZATION REVISI 2_page-0005.webp",
       title: "Jogging Track",
       description: "Dedicated jogging path for a healthy and active lifestyle.",
     },

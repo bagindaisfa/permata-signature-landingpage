@@ -7,29 +7,29 @@ const Gallery = () => {
     {
       title: 'THE SIGNATURE',
       size: 'TYPE 9×10',
-      image: '/images/type-9.png',
-      plan: '/images/denah-type-9.png',
+      image: '/images/type-9.webp',
+      plan: '/images/denah-type-9.webp',
       description: 'Cozy and efficient layout designed for modern living.'
     },
     {
       title: 'THE MANOR',
       size: 'TYPE 10×10',
-      image: '/images/type-10.png',
-      plan: '/images/denah-type-10.png',
+      image: '/images/type-10.webp',
+      plan: '/images/denah-type-10.webp',
       description: 'Balanced spaces with premium finishing for families.'
     },
     {
       title: 'THE ESTATE',
       size: 'TYPE 12×14',
-      image: '/images/type-12.png',
-      plan: '/images/denah-type-12.png',
+      image: '/images/type-12.webp',
+      plan: '/images/denah-type-12.webp',
       description: 'Spacious design offering flexibility and comfort.'
     },
     {
       title: 'THE GRAND',
       size: 'TYPE 17×20',
-      image: '/images/type-17.png',
-      plan: '/images/denah-type-17.png',
+      image: '/images/type-17.webp',
+      plan: '/images/denah-type-17.webp',
       description: 'Grand proportions with luxury details throughout.'
     },
   ];

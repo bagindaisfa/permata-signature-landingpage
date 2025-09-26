@@ -24,7 +24,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     // WhatsApp number (replace with actual business number)
-    const phoneNumber = "6281292172776"; // Replace with actual WhatsApp number
+    const phoneNumber = "628119938070"; // Replace with actual WhatsApp number
 
     // Format and encode the message
     const encodedMessage =
