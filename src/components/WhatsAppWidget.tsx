@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const WHATSAPP_NUMBER = '628119938070';
+const WHATSAPP_NUMBER = '6281216661658';
 
 const WhatsAppWidget = () => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);

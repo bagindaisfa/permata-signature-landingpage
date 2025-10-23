@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-semibold mb-4">Permata Signature</h3>
-            <p className="text-gray-400">Luxury living redefined with premium residential properties.</p>
+            <p className="text-gray-400 mb-4">Luxury living redefined with premium residential properties.</p>
+            <a 
+              href="https://www.instagram.com/permatasignature?igsh=MXMxMXNhdXJmc2xpcg==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+              aria-label="Visit our Instagram"
+            >
+              <FaInstagram className="w-6 h-6" />
+            </a>
           </div>
           
           <div>
