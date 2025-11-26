@@ -35,18 +35,19 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src={
-                scrolled || !isHomePage
-                  ? "/logo.png"
-                  : "/logo-white.png"
-              }
+              src={scrolled || !isHomePage ? "/logo.png" : "/logo-white.png"}
               alt="Permata Signature"
-              className={`h-10 md:h-12 transition-all duration-300 ${
-                scrolled || !isHomePage
-                  ? "opacity-100"
-                  : "opacity-90 hover:opacity-100"
-              }`}
-              style={{ minWidth: "230px", minHeight: "57px" }}
+              className={`
+                h-10 md:h-12 
+                transition-all duration-300 
+                min-w-[180px] md:min-w-[230px]
+                min-h-[45px] md:min-h-[70px]
+                ${
+                  scrolled || !isHomePage
+                    ? "opacity-100"
+                    : "opacity-90 hover:opacity-100"
+                }
+              `}
             />
           </Link>
 
@@ -111,9 +112,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               onMouseEnter={() => setIsOpen(true)}
               className={`${
-                scrolled || !isHomePage
-                  ? "text-ps-dark-900"
-                  : "text-white"
+                scrolled || !isHomePage ? "text-ps-dark-900" : "text-white"
               } hover:text-ps-primary-700 focus:outline-none transition-colors`}
               aria-label="Toggle menu"
             >
@@ -151,7 +150,7 @@ const Navbar = () => {
               >
                 Products
               </a>
-              
+
               <a
                 href="#location"
                 className="block px-4 py-3 text-white hover:text-ps-primary-pale transition-colors"
